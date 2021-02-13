@@ -6,3 +6,5 @@ O que vou aprender na Trybe
 - CSS
 - HTML
 - Python
+- Internet
+- JavaScript
