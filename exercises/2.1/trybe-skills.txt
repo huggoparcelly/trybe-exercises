@@ -7,3 +7,5 @@ O que vou aprender na Trybe
 - HTML
 - Python
 - Soft Skills
+- Internet
+- JavaScript
