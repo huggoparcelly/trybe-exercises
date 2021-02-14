@@ -14,3 +14,7 @@ li:active{
     color: white;
     font-family: fantasy, sans-serif;
 }
+
+ol, ul {
+    list-style: none;
+}
