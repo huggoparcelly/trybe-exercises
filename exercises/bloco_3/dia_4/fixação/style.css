@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(235, 238, 235);
+}
+
+.header-title, .links {
+    text-align: center;
+}
+
+.links ul li {
+    display: inline-block;
+    margin:20px;
+    font-size: 20px;
+}
+
+p {
+    line-height: 18px;
+}
+
+
+table {
+    margin-left: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table tr td{
+    display: inline;
+}
+
+
+.facts {
+    margin: 10px;
+    text-align: justify;
+}
+
+.right-bar img {
+    width: 185px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.right-bar p {
+    font-size: 12px;
+    margin-top: 0.5px;
+    margin-left: 20px;
+    line-height: 2px;
+}
+
+.right-bar {
+    float: right;
+}
+
+section img {
+    width: 200px;
+}
+
+.bibli ul li {
+    display: block;
+}
+
+.youtube {
+    width: 400px;
+}
+
+footer {
+    text-align: right;
+}
