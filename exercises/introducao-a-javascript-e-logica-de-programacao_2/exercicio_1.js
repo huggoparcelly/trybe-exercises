@@ -20,3 +20,12 @@ let media=0;
 
 media = soma / numbers.length;
 console.log(`A média dos valores é: ${media}`);
+
+//Exercicio 4
+
+if (media > 20){
+  console.log("valor maior que 20")
+}else{
+  console.log("Valor menor ou igual a 20")
+}
+
