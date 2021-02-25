@@ -54,3 +54,15 @@ if (contImpar > 0){
 }else{
   console.log("nenhum valor impar encontrado")
 }
+
+//Exercicio 7
+
+let menor = numbers[0]
+for(let cont = 0; cont < numbers.length; cont += 1){
+  if (menor > numbers[cont]){
+    menor = numbers[cont];
+  }
+}
+console.log(`O menor valor é ${menor}`)
+
+
