@@ -29,3 +29,12 @@ if (media > 20){
   console.log("Valor menor ou igual a 20")
 }
 
+//Exercicio 5
+
+let maior = numbers[0]
+for(let valor = 0; valor < numbers.length; valor += 1){
+  if (maior < numbers[valor]){
+    maior = numbers[valor];
+  }
+}
+console.log(`O maior valor é ${maior}`)
