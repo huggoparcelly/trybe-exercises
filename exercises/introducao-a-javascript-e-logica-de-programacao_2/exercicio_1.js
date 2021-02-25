@@ -38,3 +38,19 @@ for(let valor = 0; valor < numbers.length; valor += 1){
   }
 }
 console.log(`O maior valor é ${maior}`)
+
+//Exercicio 6
+
+let contImpar = 0;
+
+for(let value = 0; value < numbers.length; value += 1){
+  if(numbers[value] % 2 != 0){
+    contImpar += 1;
+  }
+}
+
+if (contImpar > 0){
+  console.log(`Existe(m) ${contImpar} valor(es) impar(es)`)
+}else{
+  console.log("nenhum valor impar encontrado")
+}
