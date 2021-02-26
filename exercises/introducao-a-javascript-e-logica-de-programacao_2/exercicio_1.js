@@ -65,4 +65,11 @@ for(let cont = 0; cont < numbers.length; cont += 1){
 }
 console.log(`O menor valor é ${menor}`)
 
+//Exercicio 8
 
+let minhaArray = [];
+
+for (let num = 1; num <= 25; num += 1){
+  minhaArray.push(num)
+}
+console.log(minhaArray);
