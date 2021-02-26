@@ -73,3 +73,14 @@ for (let num = 1; num <= 25; num += 1){
   minhaArray.push(num)
 }
 console.log(minhaArray);
+
+//Exercicio 9
+
+let divisaoArray = [];
+
+for(let c = 0; c < minhaArray.length; c += 1){
+  let divisao = minhaArray[c] / 2
+  divisaoArray.push(divisao);
+}
+
+console.log(divisaoArray);
