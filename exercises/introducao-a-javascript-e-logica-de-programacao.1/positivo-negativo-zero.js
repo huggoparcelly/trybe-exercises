@@ -1,9 +1,15 @@
-let num = 0;
+//function
 
-if (num > 0){
-  console.log("Positivo")
-}else if (num < 0) {
-  console.log("Negativo")
-}else {
-  console.log("Zero")
-}
+function positivoNegativo(num){
+  resp = ' ';
+  if (num > 0){
+    resp = "Positivo"
+  }else if (num < 0) {
+    resp = ("Negativo")
+  }else {
+    resp = ("Zero")
+  }
+  return resp;
+};
+
+console.log(positivoNegativo(-4));
