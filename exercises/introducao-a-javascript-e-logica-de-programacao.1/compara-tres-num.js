@@ -9,3 +9,6 @@ function compareTree (num1, num2, num3){
     console.log("O terceiro número é o maior")
   }
 };
+
+
+compareTree(2, 5, 20);
