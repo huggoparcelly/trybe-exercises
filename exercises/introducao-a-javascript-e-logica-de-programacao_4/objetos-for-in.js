@@ -17,17 +17,17 @@ console.log('Bem-vinda, ' + info.personagem);
 
 console.log(info)
 
-for (key in info){
+for (let key in info){
   console.log(key)
 }
 
-for (key in info){
+for (let key in info){
   console.log(info[key]);
 };
 
 
 
-for (key in info){
+for (let key in info){
   if (info[key] === info.recorrente && info[key] === 'Sim' && infoTio[key] === 'Sim'){
     console.log('Ambos recorrentes');
   } else{

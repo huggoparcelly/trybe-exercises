@@ -1,7 +1,7 @@
 function bigName(nomes){
   maiorNome = nomes[0];
 
-  for(nome in nomes){  
+  for(let nome in nomes){  
     if(maiorNome.length < nomes[nome].length){
       maiorNome = nomes[nome];
     }

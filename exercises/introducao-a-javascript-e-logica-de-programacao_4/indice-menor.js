@@ -2,7 +2,7 @@ function smallIndex(array){
   let menor = array[0];
   let indexSmall = 0;
 
-  for(index in array){
+  for(let index in array){
     if(array[index] < menor){
       menor = array[index];
       indexSmall = index;

@@ -2,7 +2,7 @@ function bigIndex(array) {
   let maior = array[0];
   let indexBig = 0;
   
-  for(index in array){
+  for(let index in array){
     if(maior < array[index]){
       maior = array[index];
       indexBig = index;
