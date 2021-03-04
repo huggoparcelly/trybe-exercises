@@ -34,3 +34,13 @@ function upper(tagName) {
 }
 
 upper('p');
+
+
+function imprimir(tagName) {
+  let texto = document.getElementsByTagName(tagName);
+  for (tag in texto) {
+    console.log(texto[tag].innerHTML);
+  }
+}
+
+imprimir('p');
