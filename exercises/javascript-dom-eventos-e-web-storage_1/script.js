@@ -9,3 +9,10 @@ function newBgColor(bgColor) {
 }
 
 newBgColor('rgb(76,164,109)')
+
+
+function newBoxColor(boxColor) {
+  document.querySelectorAll('.center-content')[0].style.backgroundColor = boxColor;
+}
+
+newBoxColor('white');
