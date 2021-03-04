@@ -16,3 +16,10 @@ function newBoxColor(boxColor) {
 }
 
 newBoxColor('white');
+
+
+function newTitle (text) {
+  document.getElementsByClassName('title')[0].innerHTML = text;
+}
+
+newTitle('Exercício 5.1 - JavaScripit')
