@@ -23,3 +23,14 @@ function newTitle (text) {
 }
 
 newTitle('Exercício 5.1 - JavaScripit')
+
+
+function upper(tagName) {
+  
+  let paragrafo = document.getElementsByTagName(tagName);
+  for (tag in paragrafo) {
+    paragrafo[tag].innerHTML = paragrafo[tag].innerHTML.toUpperCase();
+  }
+}
+
+upper('p');
