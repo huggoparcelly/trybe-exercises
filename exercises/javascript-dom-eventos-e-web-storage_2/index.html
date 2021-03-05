@@ -106,11 +106,21 @@
       let value = extenseviValues[v]; // varre os array
       let itens = document.createElement('li'); // cria os itens da lista
       list.appendChild(itens); // adiciona os itens na lista
-      itens.innerHTML = value; // adiciona os valores aos itens
+      itens.innerHTML = value; // itens recebem os valores
       }
       
 
       //Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+      let first = document.createElement('h3');
+      mainContent.appendChild(first);
+      first.innerHTML = 'Huggo Parcelly';
+      let second = document.createElement('h3');
+      mainContent.appendChild(second);
+      second.innerHTML = 'Futuro desenvolvedor de software';
+      let third = document.createElement('h3');
+      mainContent.appendChild(third);
+      third.innerHTML = 'Vamo que vamo!';
+
     </script>
   </body>
 </html>
