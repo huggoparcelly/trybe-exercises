@@ -73,3 +73,22 @@ function btnFriday(nameDay) {
 }
 
 btnFriday('Sexta-feira');
+
+function changeTextFriday(arrayFridays) {
+  let getBtnFriday = document.querySelector('#btn-friday'); //botão
+  let getFriday = document.querySelectorAll('.friday'); //dias
+  let textBtnFriday = 'SEXTOU!'; //conteúdo do botão "sexta-feira"
+  
+  getBtnFriday.addEventListener('click', function () {
+    for (day in getFriday){
+      if (getFriday[day].innerHTML === textBtnFriday) {
+        getFriday[day].innerHTML = arrayFridays[day];
+      } else {
+        getFriday[day].innerHTML = textBtnFriday;
+      }
+    }
+  });
+};
+
+let fridays = [4, 11, 18, 25]
+changeTextFriday(fridays)
