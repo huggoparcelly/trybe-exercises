@@ -33,6 +33,7 @@ for (d in dezDaysList) {
   }
 }
 
+
 function holidaysButton(bntName) {
   let bnt = document.createElement('button');
   let addBnt = document.querySelector('.buttons-container');
@@ -42,3 +43,22 @@ function holidaysButton(bntName) {
 }
 
 holidaysButton('Feriados')
+
+function changeHolidays(){
+  let getBnt = document.querySelector('#bnt-holiday');
+  let getHoliday = document.querySelectorAll('.holiday');
+  let firstBgColor = 'rgb(238,238,238)';
+  let secondBgColor = 'rgb(0, 255, 127)';
+
+  getBnt.addEventListener('click', function() {
+    for (i in getHoliday) {
+      if (getHoliday[i].style.backgroundColor === secondBgColor) {
+        getHoliday[i].style.backgroundColor = firstBgColor;
+      } else {
+        getHoliday[i].style.backgroundColor = secondBgColor;
+      }
+    }
+  })
+};
+
+changeHolidays();
