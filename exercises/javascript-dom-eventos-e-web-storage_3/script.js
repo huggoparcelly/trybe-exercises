@@ -32,3 +32,13 @@ for (d in dezDaysList) {
     day.className += ' friday';
   }
 }
+
+function holidaysButton(bntName) {
+  let bnt = document.createElement('button');
+  let addBnt = document.querySelector('.buttons-container');
+  bnt.innerHTML = bntName;
+  bnt.id = 'bnt-holiday';
+  addBnt.appendChild(bnt);
+}
+
+holidaysButton('Feriados')
