@@ -114,9 +114,20 @@ zoomOff();
 
 function myTasks (tasks) {
   let getMyTasks = document.querySelector('.my-tasks');
-  let task = document.createElement('spam');
-  task.innerHTML = tasks;
-  getMyTasks.appendChild(task); 
+  let taskName = document.createElement('spam');
+  taskName.innerHTML = tasks;
+  getMyTasks.appendChild(taskName); 
 }
 
 myTasks('Cozinhar');
+
+
+function colorSub(color) {
+  let getMyTasks = document.querySelector('.my-tasks');
+  let taskBg = document.createElement('div');
+  taskBg.className = 'task';
+  taskBg.style.backgroundColor = color;
+  getMyTasks.appendChild(taskBg);
+}
+
+colorSub('green');
