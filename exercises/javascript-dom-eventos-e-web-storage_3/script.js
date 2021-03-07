@@ -134,6 +134,7 @@ colorSub('green');
 
 function selection() {
   let getTask = document.querySelector('.task');
+
   getTask.addEventListener('click', function (event) {
     if (getTask.className === 'task') {
       event.target.className = 'task selected';
@@ -144,3 +145,23 @@ function selection() {
 };
 
 selection();
+
+
+function eventDay() {
+  let day = document.querySelector('#days');
+  let selectedTask = document.getElementsByClassName('task selected');
+  let task = document.querySelector('.task');
+  let taskColor = task.style.backgroundColor;
+
+  day.addEventListener('click', function (event) {
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (selectedTask.length !== 0 && eventTargetColor === taskColor) {
+      event.target.style.color = 'rgb(119,119,119)'
+    }
+  });
+}
+
+eventDay();
