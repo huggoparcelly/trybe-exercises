@@ -111,3 +111,12 @@ function zoomOff() {
 
 zoomOn();
 zoomOff();
+
+function myTasks (tasks) {
+  let getMyTasks = document.querySelector('.my-tasks');
+  let task = document.createElement('spam');
+  task.innerHTML = tasks;
+  getMyTasks.appendChild(task); 
+}
+
+myTasks('Cozinhar');
