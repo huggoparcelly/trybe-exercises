@@ -131,3 +131,16 @@ function colorSub(color) {
 }
 
 colorSub('green');
+
+function selection() {
+  let getTask = document.querySelector('.task');
+  getTask.addEventListener('click', function (event) {
+    if (getTask.className === 'task') {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+  }
+  });
+};
+
+selection();
