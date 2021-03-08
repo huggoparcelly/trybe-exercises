@@ -119,7 +119,7 @@ function myTasks (tasks) {
   getMyTasks.appendChild(taskName); 
 }
 
-myTasks('Cozinhar');
+myTasks('Projeto');
 
 
 function colorSub(color) {
@@ -165,3 +165,36 @@ function eventDay() {
 }
 
 eventDay();
+
+
+function addNewTask (){
+  let newInput = document.querySelector('#task-input');
+  let taskList = document.querySelector('.task-list');
+  let btnAdd = document.querySelector('#btn-add');
+
+  
+
+  btnAdd.addEventListener('click', function() {
+    if (newInput.value.length > 0) {
+      let newTaskList = document.createElement('li');
+      newTaskList.innerText = newInput.value;
+
+      taskList.appendChild(newTaskList);
+      newInput.value = '';
+    } else {
+      alert('Error: Campo Vazio!')
+    }
+  });
+
+  newInput.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13  && newInput.value.length > 0) {
+      let newTaskList = document.createElement('li');
+      newTaskList.innerText = newInput.value;
+
+      taskList.appendChild(newTaskList);
+      newInput.value = '';
+    }
+  });
+};
+
+addNewTask();
