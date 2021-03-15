@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <head>
+    <h1>Cadastro Currículo</h1>
+    <p>Cadastre o seu currículo em nosso Banco de Talentos</p>
+  </head>
+  <form action="" method="get">
+    <fieldset>
+      <label for="input-nome">Nome</label>
+      <input type="text" name="nome" id="input-nome" maxlength="40" required placeholder="Digite seu nome">
+
+      <label for="input-email">E-mail</label>
+      <input type="text" name="email" id="input-email" maxlength="50" required placeholder="Digite seu e-mail">
+
+      <label for="input-cpf">CPF</label>
+      <input type="text" name="cpf" id="input-cpf" maxlength="11" required placeholder="CPF (apenas números)">
+
+      <label for="input-estado">Estado que você mora</label>
+      <select name="estado" id="input-estado" required>
+      </select>
+
+      <label for="house">
+        <input type="radio" name="home" id="house">Casa
+      </label>
+      <label for="apartment">
+        <input type="radio" name="home" id="apartment">Apartamento
+      </label>
+    </fieldset>
+  </form>
+  
+  <script src="script.js"></script>
+</body>
+</html>
