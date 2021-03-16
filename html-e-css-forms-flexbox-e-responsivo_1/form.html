@@ -8,31 +8,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <head>
+  <header class="form-header">
     <h1>Cadastro Currículo</h1>
     <p>Cadastre o seu currículo em nosso Banco de Talentos</p>
-  </head>
+  </header>
   <form action="" method="get">
-    <fieldset>
-      <label for="input-nome">Nome</label>
-      <input type="text" name="nome" id="input-nome" maxlength="40" required placeholder="Digite seu nome">
+    <fieldset class="field-row">
+      <div class="line-content">
+        <label for="input-nome">Nome</label>
+        <input type="text" name="nome" id="input-nome" maxlength="40" required placeholder="Digite seu nome" autofocus>
+      </div>
+      
+      <div class="line-content">
+        <label for="input-email">E-mail</label>
+        <input type="text" name="email" id="input-email" maxlength="50" required placeholder="Digite seu e-mail">
+      </div>
 
-      <label for="input-email">E-mail</label>
-      <input type="text" name="email" id="input-email" maxlength="50" required placeholder="Digite seu e-mail">
+      <div class="line-content">
+        <label for="input-cpf">CPF</label>
+        <input type="text" name="cpf" id="input-cpf"  maxlength="11" required placeholder="CPF (apenas números)">
+      </div>
 
-      <label for="input-cpf">CPF</label>
-      <input type="text" name="cpf" id="input-cpf" maxlength="11" required placeholder="CPF (apenas números)">
+      <div class="line-content">
+        <label for="input-estado">Estado que você mora</label>
+        <select name="estado" id="input-estado" required>
+        </select>
+      </div>
 
-      <label for="input-estado">Estado que você mora</label>
-      <select name="estado" id="input-estado" required>
-      </select>
+      <div class="line-content">
+        <label for="house">
+        <input type="radio" name="home" id="house"> Casa
+        </label>
+        <label for="apartment">
+        <input type="radio" name="home" id="apartment"> Apartamento
+        </label>
+      </div>
 
-      <label for="house">
-        <input type="radio" name="home" id="house">Casa
-      </label>
-      <label for="apartment">
-        <input type="radio" name="home" id="apartment">Apartamento
-      </label>
+    </fieldset>
+
+    <fieldset class="field-row">
+      <div class="line-content">
+        <label for="abstract">Resumo do currículo</label>
+        <textarea name="resumo" id="abstract" cols="30" rows="10" maxlength="1000" placeholder="Resumo (1000 caracters)" required></textarea>
+      </div>
+      
+      <div class="line-content">
+        <label for="office">Cargo</label>
+        <input type="text" id="office" maxlength="40" placeholder="Cargo" required>
+      </div>
+      <div class="line-content">
+        <label for="description">Descrição do Cargo</label>
+        <input type="text" id="description" maxlength="500" placeholder="Descrição" required>
+      </div>
+      <div class="line-content">
+        <label for="date">Data de inicio</label>
+        <input type="text" id="date" placeholder="dd/mm/aaaa" required>
+      </div>
     </fieldset>
   </form>
   
