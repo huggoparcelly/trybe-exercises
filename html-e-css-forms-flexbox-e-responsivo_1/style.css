@@ -73,3 +73,13 @@ body {
   resize: none;
   display: block;
 }
+
+#submit {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(9, 172, 9);
+  color: black;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}

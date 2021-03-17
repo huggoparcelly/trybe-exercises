@@ -13,19 +13,19 @@ function createOptions() {
 const inputDate = document.querySelector('#date'); // captura o input data
 
 function validationDate() {
-  inputDate.addEventListener('change', function () {
-    const getDate = inputDate.value.split('/'); // separa os elementos pela barra
-    const day = parseInt(getDate[0]);
-    const month = parseInt(getDate[1]);
-    const year = parseInt(getDate[2]);
-    if (day < 0 || day > 31 || month < 0 || month > 12 || year < 0) {
-      alert('Data incorreta!')
-    }
-  })
+  const getDate = inputDate.value.split('/'); // separa os elementos pela barra
+  const day = parseInt(getDate[0]);
+  const month = parseInt(getDate[1]);
+  const year = parseInt(getDate[2]);
+  if (day < 0 || day > 31 || month < 0 || month > 12 || year < 0) {
+    alert('Data incorreta!')
+  }
 }
 
 
+
 window.onload = function () {
-  createOptions();
   validationDate();
+  createOptions();
+  document.getElementById('submit')
 };
