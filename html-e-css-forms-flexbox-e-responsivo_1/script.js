@@ -2,8 +2,30 @@ const estadosBr = ['Acre','Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'D
 
 const dropDownList = document.querySelector('#input-estado'); // captura o drop Down
 
-for (let i = 0; i < estadosBr.length; i+= 1) {
-  const createStateList = document.createElement('option'); // cria uma option
-  createStateList.innerText = estadosBr[i]; // a option recebe o texto contido na lista de estados
-  dropDownList.appendChild(createStateList); // coloca a option dentro do dropdown
+function createOptions() {
+  for (let i = 0; i < estadosBr.length; i+= 1) {
+    const createStateList = document.createElement('option'); // cria uma option
+    createStateList.innerText = estadosBr[i]; // a option recebe o texto contido na lista de estados
+    dropDownList.appendChild(createStateList); // coloca a option dentro do dropdown
+  }
 }
+
+const inputDate = document.querySelector('#date'); // captura o input data
+
+function validationDate() {
+  inputDate.addEventListener('change', function () {
+    const getDate = inputDate.value.split('/'); // separa os elementos pela barra
+    const day = parseInt(getDate[0]);
+    const month = parseInt(getDate[1]);
+    const year = parseInt(getDate[2]);
+    if (day < 0 || day > 31 || month < 0 || month > 12 || year < 0) {
+      alert('Data incorreta!')
+    }
+  })
+}
+
+
+window.onload = function () {
+  createOptions();
+  validationDate();
+};
