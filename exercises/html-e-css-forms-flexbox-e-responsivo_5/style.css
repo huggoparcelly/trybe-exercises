@@ -29,4 +29,14 @@ figure {
     font-size: 17px;
     margin: 30px;
   }
+
+  .cat-pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  figure {
+    max-width: 300px;
+  }
 }
