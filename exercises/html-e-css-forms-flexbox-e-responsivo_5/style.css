@@ -46,5 +46,6 @@ figure {
     background-color: rgb(190, 185, 185);
     font-size: 20px;
     margin: 20px;
+    max-width: 1300px;
   }
 }
