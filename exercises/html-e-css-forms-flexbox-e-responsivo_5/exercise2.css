@@ -3,4 +3,77 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  background-color: rgb(233, 231, 231);
+}
+
+@media screen and (max-width: 375px) {
+  body { 
+    margin: 20px;
+  }
+  
+  header nav {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title-heeader {
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .aside-one h2 {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .aside-one ul {
+    padding-left: 10px;
+  }
+
+  ul li {
+    list-style: none;
+    line-height: 20px;
+  }
+
+  .aside-two {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .aside-two h2 {
+    font-size: 16px;
+    margin: 0px
+  }
+
+  .aside-two ul {
+    padding-left: 0px;
+  }
+
+  .main-content h1 {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .main-content p {
+    text-align: justify;
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  footer h3 {
+    font-size: 16px;
+    margin: 0px
+  }
+
+  footer p {
+    text-align: justify;
+    font-size: 15px;
+  }
 }
