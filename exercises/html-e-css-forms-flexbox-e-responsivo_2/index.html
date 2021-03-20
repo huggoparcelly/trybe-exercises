@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro CV</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pikaday.css">
+</head>
+<body>
+  <section class="text-center">
+    <h1>Cadastro Currículo</h1>
+    <p><em>Cadastre o seu currículo em nosso Banco de Talentos</em></p>
+  </section>
+  <form class="js-form" action="" method="GET" >
+    <fieldset>
+      <div class="form-label just-validate-tooltip-container">
+        <label for="name">Nome</label>
+        <input class="form-control"  type="text" data-validate-field="name" name="name" id="name" placeholder="Digite seu nome" autofocus>
+      </div>
+      
+      <div class="form-label">
+        <label for="input-email">E-mail</label>
+        <input class="form-control"  type="text" name="email" id="input-email" maxlength="50" required placeholder="Digite seu e-mail">
+      </div>
+
+      <div class="form-label">
+        <label for="input-cpf">CPF</label>
+        <input class="form-control"  type="text" name="cpf" id="input-cpf"  maxlength="11" required placeholder="CPF (apenas números)">
+      </div>
+
+      <div class="form-label">
+        <label for="input-estado">Estado que você mora</label>
+        <select class="form-select form-select-sm" name="estado" id="input-estado" required>
+        </select>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="home" id="house">
+        <label class="form-check-label" for="house">Casa</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="home" id="apartment">
+        <label class="form-check-label" for="apartment">Apartamento</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="form-label">
+        <label for="abstract">Resumo do currículo</label>
+        <textarea class="form-control" name="resumo" id="abstract" cols="30" rows="10" maxlength="1000" placeholder="Resumo (1000 caracters)" required></textarea>
+      </div>
+      
+      <div class="form-label">
+        <label for="office">Cargo</label>
+        <input class="form-control" type="text" id="office" maxlength="40" placeholder="Cargo" required>
+      </div>
+      <div class="form-label">
+        <label for="description">Descrição do Cargo</label>
+        <input class="form-control" type="text" id="description" maxlength="500" placeholder="Descrição" required>
+      </div>
+      <div class="form-label">
+        <label for="date">Data de inicio</label>
+        <input class="form-control" type="text" id="datepicker" placeholder="dd/mm/aaaa" required>
+      </div>
+    </fieldset>
+    <div class="gap-2 d-md-flex justify-content-md-center">
+      <button class="btn btn-success" type="submit" id="submit">Enviar</button>
+      <input class="btn btn-danger" type="reset" value="Reset">
+    </div>
+
+  </form>
+  
+  <script src="js/pikaday.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/moment.js"></script>
+</body>
+</html>
