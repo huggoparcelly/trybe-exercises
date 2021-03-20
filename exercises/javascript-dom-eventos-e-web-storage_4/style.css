@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Inconsolata&display=swap');
+
+/* font-family: 'Inconsolata', monospace; */
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=DotGothic16&family=Inconsolata&display=swap');
+
+/* font-family: 'DotGothic16', sans-serif; */
+
+* {
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 50px;  
+}
+
+.sub-title {
+  font-size: 12px;
+  text-align: center;
+}
+
+.bnt-container {
+  padding: 10px;
+}
+
+.bnt-box {
+  margin: 10px;
+  text-align: justify;
+  display: inline-block;
+}
+
+#fontFamily {
+  margin: 10px;
+  text-align: justify;
+}
+
+.content {
+  text-align: justify;
+  padding: 10px;
+}
+
+.paragraph {
+  line-height: normal;
+  font-size: 12pt;
+}
