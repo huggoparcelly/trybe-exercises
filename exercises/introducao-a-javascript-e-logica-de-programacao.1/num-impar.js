@@ -1,9 +1,11 @@
-let num1 = 4;
-let num2 = 2;
-let num3 = 6;
+// function
 
-if (num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0){
-  console.log(true)
-}else{
-  console.log(false)
-}
+function numImpar(num1, num2, num3){
+  if (num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0){
+    console.log(true)
+  }else{
+    console.log(false)
+  }
+};
+
+numImpar(1, 6, 5);

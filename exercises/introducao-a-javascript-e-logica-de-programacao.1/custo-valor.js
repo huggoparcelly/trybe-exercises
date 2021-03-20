@@ -1,13 +1,16 @@
-let custo = 10;
-let venda = 25;
+//function
 
-imposto = custo * 0.2; // 20% do custo
-custoTotal = custo + imposto;
+function profit(cost, sale){
+  fax = cost * 0.2; // 20% do custo
+  fullCost = cost + fax;
 
-lucro = venda - custoTotal;
+  pro = sale - fullCost;
 
-if (custo < 0 || venda < 0){
-  console.log("Error.");
-}else{
-  console.log("Lucro com a venda de 1000 produtos:", 1000*lucro);
-}
+  if (cost < 0 || sale < 0){
+    console.log("Error.");
+  }else{
+    console.log("Lucro com a venda de 1000 produtos:", 1000*pro);
+  }
+};
+
+profit(10, 50);
