@@ -1,17 +1,11 @@
 body {
-  margin: 20px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 15px;
-}
 
+}
 h1 {
-  font-size: 20px;
-  text-align: center;
-}
 
+}
 h2 {
-  text-align: justify;
+
 }
 
 img {
@@ -20,32 +14,4 @@ img {
 
 figure {
     margin: 0;
-    padding: 20px;
-}
-
-@media screen and (min-width:800px) {
-  body {
-    background-color: rgb(219, 214, 214);
-    font-size: 17px;
-    margin: 30px;
-  }
-
-  .cat-pictures {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  figure {
-    max-width: 300px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  body {
-    background-color: rgb(190, 185, 185);
-    font-size: 20px;
-    margin: 20px;
-    max-width: 1300px;
-  }
 }
