@@ -4,3 +4,52 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    margin: 20px;
+  }
+
+  .alice-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .title-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .nav-header {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .aside-one {
+    margin: auto;
+    width: 100%;
+  }
+
+  .aside-one ul {
+    padding: 0;
+  }
+
+  .title-aside-one {
+    font-size: 18px;
+  }
+
+  .aside-two {
+    text-align: end;
+    font-size: 12px;
+  }
+
+  .title-aside-two {
+    font-size: 15px;
+  }
+
+}
