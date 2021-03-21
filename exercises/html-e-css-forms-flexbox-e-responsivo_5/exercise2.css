@@ -43,13 +43,26 @@ ul {
     font-size: 18px;
   }
 
-  .aside-two {
+  .aside-two, footer {
     text-align: end;
     font-size: 12px;
   }
 
-  .title-aside-two {
+  .title-aside-two, title-footer {
     font-size: 15px;
   }
 
+  .main-content {
+    margin-top: 50px;
+  }
+
+  .title-chapter {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main-content p {
+    text-align: justify;
+    font-size: 17px;
+  }
 }
