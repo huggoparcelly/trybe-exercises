@@ -17,6 +17,7 @@ ul {
   .alice-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .title-header {
@@ -26,7 +27,7 @@ ul {
   }
 
   .nav-header {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 20px;
   }
 
@@ -64,5 +65,66 @@ ul {
   .main-content p {
     text-align: justify;
     font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  body {
+    margin: 20px;
+  }
+
+  .alice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-header {
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .nav-header {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .aside-one {
+    margin-left: 30px;
+    width: 100%;
+  }
+
+  .aside-one ul {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .title-aside-one {
+    font-size: 23px;
+  }
+
+  .aside-two, footer {
+    text-align: end;
+    font-size: 15px;
+  }
+
+  .title-aside-two, title-footer {
+    font-size: 17px;
+  }
+
+  .main-content {
+    margin-top: 50px;
+  }
+
+  .title-chapter {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .main-content p {
+    text-align: justify;
+    font-size: 20px;
   }
 }
