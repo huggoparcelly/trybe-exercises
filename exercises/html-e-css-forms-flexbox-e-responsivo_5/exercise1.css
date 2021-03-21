@@ -1,11 +1,15 @@
 body {
 
 }
-h1 {
+p {
+    text-align: justify;
+}
 
+h1 {
+    text-align: center;
 }
 h2 {
-
+    text-align: center;
 }
 
 img {
@@ -14,6 +18,12 @@ img {
 
 figure {
     margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    margin: 0px 5px;
+    padding: 5px;
 }
 
 
@@ -23,15 +33,42 @@ figure {
     }
     p {
         font-size: large;
-        text-align: justify;
     }
 
     h1 {
         font-size: 25px;
-        text-align: center;
     }
 
     figure {
         margin: 10px;
     }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width:800px){
+    body {
+        background-color: rgb(238, 235, 235);
+        margin: 15px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        margin: 0px 10px;
+    }
+
+   .cats-figures {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
 }
