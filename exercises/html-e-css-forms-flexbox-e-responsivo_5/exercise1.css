@@ -14,6 +14,7 @@ h2 {
 
 img {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 figure {
@@ -61,8 +62,8 @@ figcaption {
     }
 
     img {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         margin: 0px 10px;
     }
 
@@ -71,4 +72,28 @@ figcaption {
        flex-wrap: wrap;
        justify-content: center;
    }
+}
+
+@media screen and (min-width:800px) {
+    body {
+        background-color: rgb(214, 210, 210);
+        margin: auto;
+        max-width: 80%;
+    }
+
+    p {
+        font-size: 21px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        margin: 0px 10px;
+    }
+
+    .cats-figures {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
