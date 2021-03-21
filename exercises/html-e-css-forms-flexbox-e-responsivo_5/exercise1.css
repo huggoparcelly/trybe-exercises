@@ -15,3 +15,23 @@ img {
 figure {
     margin: 0;
 }
+
+
+@media screen and (min-width:280px) and (max-width: 400px) {
+    body {
+        margin: 10px;
+    }
+    p {
+        font-size: large;
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    figure {
+        margin: 10px;
+    }
+}
