@@ -1,17 +1,102 @@
 body {
 
 }
-h1 {
 
+p {
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
 }
 h2 {
+    text-align: center;
 
 }
 
 img {
     max-width: 100%;
+    border-radius: 8px;
+
 }
 
 figure {
     margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+
+@media screen and (min-width:280px) and (max-width: 400px) {
+    body {
+        margin: 10px;
+    }
+    p {
+        font-size: large;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    figure {
+        margin: 10px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width:800px){
+    body {
+        background-color: rgb(238, 235, 235);
+        margin: 15px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        margin: 0px 10px;
+    }
+
+   .cats-figures {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+}
+
+@media screen and (min-width:800px) {
+    body {
+        background-color: rgb(214, 210, 210);
+        margin: auto;
+        max-width: 80%;
+    }
+
+    p {
+        font-size: 21px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        margin: 0px 10px;
+    }
+
+    .cats-figures {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
