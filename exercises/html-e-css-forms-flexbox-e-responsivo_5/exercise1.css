@@ -1,6 +1,7 @@
 body {
 
 }
+
 p {
     text-align: justify;
 }
@@ -10,11 +11,13 @@ h1 {
 }
 h2 {
     text-align: center;
+
 }
 
 img {
     max-width: 100%;
     border-radius: 8px;
+
 }
 
 figure {

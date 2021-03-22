@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(46, 46, 46);
+  background-color: ghostwhite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.form-header {
+  text-align: center;
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  width: 80%;
+  border-radius: 3px;
+  margin: 40px 0;
+  padding: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.field-row {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px 0;
+  padding: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#input-nome, #description {
+  width: 100%;
+}
+
+#input-cpf, #input-estado {
+  text-align: center;
+  width: 20%;
+}
+
+#input-email {
+  width: 30%;
+}
+
+.line-content {
+  margin: 20px;
+}
+
+.line-content input[type="text"], #input-estado {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#apartment {
+  margin-left: 20px;
+}
+
+#abstract {
+  resize: none;
+  display: block;
+}
+
+#submit {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(9, 172, 9);
+  color: black;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
