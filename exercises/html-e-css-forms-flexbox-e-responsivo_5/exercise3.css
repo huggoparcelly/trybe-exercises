@@ -80,3 +80,59 @@
   padding: 20px;
   height: 1%;
 }
+
+/* acima de 360px */
+@media print and (min-width:768px) {
+  #header, #navigation, #footer {
+    display: none;
+  }
+
+  #content {
+    width: 80%;
+  }
+  #aside {
+    float: left;
+  }
+}
+
+@media screen and (min-width:240px) and (max-width:768px) {
+  body {
+    padding: 0;
+  }
+
+  #aside {
+    display: none;
+  }
+  
+  #content {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #navigation {
+    margin-top: 75px;
+    width: 100%;
+    background: #333;
+  }
+
+  #navigation ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navigation ul a {
+    border: none;
+  }
+
+  
+}
