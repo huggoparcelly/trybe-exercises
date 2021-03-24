@@ -14,4 +14,8 @@ const crescente = () => {
 
 const sorted = crescente();
 
-console.log(`Os números ${sorted} se encontram ordenados de forma crescente!`);
+// console.log(`Os números ${sorted} se encontram ordenados de forma crescente!`);
+
+// Utilizando a função .sort
+oddsAndEvens.sort((a,b) => a -b);
+console.log(oddsAndEvens)
