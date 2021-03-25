@@ -57,7 +57,7 @@ console.log(nameKey(lesson2, 0))
 // Exercicio 8 - Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 const parKeyValue = (obj, keyName, valueKey) => {
   resp = ''
-  const par = Object.entries(obj)
+  const par = Object.entries(obj) // retorna um array com pares [[key:value],[key:value]]
   for (i in par) {
     if (par[i][0] === keyName && par[i][1] === valueKey) {
       resp = true
