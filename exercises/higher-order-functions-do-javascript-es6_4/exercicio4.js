@@ -76,7 +76,7 @@ const expectedResult = {
 function longestNamedBook() {
   // escreva seu código aqui
   // Encontre o livro com o maior nome.
-  // Get name compare acc with bookname
+  // Get name compare and acc with curr
   const biggestName = books.reduce((biggestName, book) => {
     if (biggestName.name.length > book.name.length) {
       return biggestName;
