@@ -32,3 +32,18 @@ describe('Test getUserName function', () => {
     })
   })
 });
+
+describe('Test getUserName whit async/await', () => {
+  test('test when find an user', async () => {
+    const user = await getUserName(4);
+    expect(user).toEqual('Mark')
+  });
+  test('test when user not exist', async () => {
+    const id = 1
+    try {
+      await getUserName(id)
+    } catch (error) {
+      expect(error).toEqual({error: 'User with ' + id + ' not found.'})
+    }
+  })
+});
