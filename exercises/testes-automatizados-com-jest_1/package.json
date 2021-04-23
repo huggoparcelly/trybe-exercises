@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "exercicio1.1.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
