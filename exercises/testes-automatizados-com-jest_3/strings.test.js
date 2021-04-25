@@ -1,3 +1,4 @@
+const { it, expect } = require('@jest/globals');
 const service = require('./strings')
 
 jest.mock('./strings')
@@ -23,4 +24,18 @@ describe('Mock the functions strings', () => {
 
     expect(service.concatened('hu','gg','o')).toBe('huggo');
   });
+});
+
+describe('Mock and reset de function UpperCase', () => {
+  it('returns a string in lowerCase', () => {
+    
+    service.upperCase = jest.fn().mockImplementation((string) => string.toLowerCase());
+
+    expect(service.upperCase('Huggo')).toBe('huggo')
+
+  });
+  it('returns a string in uppercase', () => {
+    service.upperCase.mockReset();
+    expect(service.upperCase('huggo')).toBe(undefined)
+  })
 });
