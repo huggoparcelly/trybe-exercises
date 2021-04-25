@@ -1,3 +1,4 @@
+
 const { expect } = require('@jest/globals');
 let random = require('./random0-10');
 
@@ -13,12 +14,29 @@ describe('Tests whit mock to random function', () => {
   })
 });
 
-describe('New implementation', () => {
+describe('Division', () => {
   test('if the function change', () => {
-    random.mockImplementation((a, b) => a / b);
+    random = jest.fn().mockImplementation((a, b) => a / b);
     random(10, 2);
-    expect(random).toBeCalled();
+    expect(random).toHaveBeenCalled();
     expect(random(10, 2)).toBe(5);
-    expect(random).toHaveBeenCalledTimes(2)
-  })
-})
+  });
+});
+
+describe('Multiply', () => {
+  test('if parameter are multiplied', () => {
+    random = jest.fn().mockImplementation((a, b, c) => a * b * c);
+    expect(random(1, 2, 3)).toBe(6);
+    expect(random).toHaveBeenCalled()
+    expect(random).toHaveBeenCalledTimes(1)
+  });
+  
+  test('if mock was reseted', () => {
+    random.mockReset();
+
+    random.mockImplementation(a => a * 2);
+    expect(random(3)).toBe(6);
+    expect(random).toHaveBeenCalled()
+    expect(random).toHaveBeenCalledTimes(1)
+  });
+});
