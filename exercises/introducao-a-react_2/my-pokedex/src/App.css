@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+  font-size: 30px
+}
+
+.card {
+  border: 5px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.mainContainer {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

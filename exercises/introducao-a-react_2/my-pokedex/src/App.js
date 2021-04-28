@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
+import Pokedex from './components/Pokedex';
+
 
 function App() {
-  return ;
+  return <Pokedex />
 }
 
 export default App;
