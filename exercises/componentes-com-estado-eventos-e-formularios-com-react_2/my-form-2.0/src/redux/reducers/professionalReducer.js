@@ -14,7 +14,7 @@ function professionalReducer(state = INITIAL_STATE, action) {
     case 'OFFICER':
       return {
         ...state,
-        curriculum: action.value,
+        officer: action.value,
       };
     case 'DESCRIPTION':
       return {
