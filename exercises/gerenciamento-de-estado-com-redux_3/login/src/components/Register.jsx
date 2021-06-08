@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addRegister } from '../actions';
+import { registerAction } from '../redux/actions';
 
 class Register extends React.Component {
   constructor(props) {
@@ -11,11 +11,11 @@ class Register extends React.Component {
       age: '',
       email: '',
     };
-  }
+  };
 
-  validateRegister = () => {
-    const { name, age, email } = this.state;
-    this.props.addRegister({ name, age, email });
+  validadeRegiister = () => {
+    const {name, age, email} = this.state;
+    this.props.registerClient({ name, age, email });
     this.setState({
       name: '',
       age: '',
@@ -24,46 +24,44 @@ class Register extends React.Component {
   };
 
   render() {
+    const { registerClient } = this.props;
     const { name, age, email } = this.state;
-    const { userLogin } = this.props;
-    if (!userLogin.email) return <div>Login não efetuado!</div>;
     return (
-      <>
-        <h2>Cadastrar</h2>
-        <section>
-          <input
-            type="text"
-            placeholder="Nome"
-            value={ name }
-            onChange={(e) => this.setState({ name: e.target.value })}
-          />
-          <input
-            type="number"
-            placeholder="Idade"
-            value={ age }
-            onChange={ (e)=> this.setState({ age: e.target.value })}  
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={ email }
-            onChange={ (e)=> this.setState({ email: e.target.value })}
-          />
-        </section>
-        <button onClick={ this.validateRegister }>Registrar Cliente</button>
-        <Link to="/clients">Ver clientes cadastrados</Link>
-        <Link to="/">Página Inicial</Link>
+      <> 
+        <h1>Clientes registrados</h1>
+        <input
+          type="text"
+          placeholder="Nome"
+          onChange={(e) => this.setState({ name: e.target.value })}
+        />
+        <input
+          type="number"
+          placeholder="Idade"
+          onChange={(e) => this.setState({ age: e.target.value })}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          onChange={(e) => this.setState({ email: e.target.value })}
+        />
+        <button
+          type="submit"
+          onClick={ this.validadeRegiister }
+        >
+          Cadastrar
+        </button>
+        <Link
+          to='/clients'
+        >
+          Verificar clientes cadastrados
+        </Link>
       </>
-    )
+    );
   }
 };
 
-const mapDispatchToPros = (dispatch) => ({
-  addRegister: (user) => dispatch(addRegister(user))
+const mapDispatchToProps = (dispatch) => ({
+  registerClient: (value) => dispatch(registerAction(value))
 });
 
-const mapStoreToProps = (state) => ({
-  userLogin: state.loginReducer
-});
-
-export default connect(mapStoreToProps, mapDispatchToPros)(Register);
+export default connect(null, mapDispatchToProps)(Register);
