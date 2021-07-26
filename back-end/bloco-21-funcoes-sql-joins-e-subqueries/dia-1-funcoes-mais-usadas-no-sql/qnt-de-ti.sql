@@ -1,0 +1,2 @@
+SELECT COUNT(JOB_ID) FROM hr.employees
+WHERE JOB_ID = 'IT_PROG';
