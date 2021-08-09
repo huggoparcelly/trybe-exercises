@@ -1,0 +1,7 @@
+USE zoologico;
+
+CREATE TABLE gerente(
+gerente_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+sobrenome VARCHAR(100)
+)ENGINE = InnoDB; 

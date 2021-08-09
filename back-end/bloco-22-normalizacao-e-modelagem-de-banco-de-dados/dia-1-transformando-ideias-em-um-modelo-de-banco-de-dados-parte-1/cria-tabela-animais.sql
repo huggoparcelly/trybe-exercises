@@ -1,0 +1,10 @@
+USE zoologico;
+
+CREATE TABLE animais(
+animal_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+especie VARCHAR(100) NOT NULL,
+sexo VARCHAR(50) NOT NULL,
+idade INT,
+localizacao VARCHAR(100) NOT NULL
+)ENGINE = InnoDB;
