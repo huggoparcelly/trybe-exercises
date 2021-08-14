@@ -1,12 +1,12 @@
 db.movies.updateOne(
   {title: "Batman", "cast.character": "Batman"}, 
-  {$set: {"cast.$.actor": "Christian Bale"}}
+  {$push: {"cast.$.actor": "Christian Bale"}}
 )
 
 db.movies.updateOne(
   {title: "Batman", "cast.character": "Alfred"}, 
-  {$set: {"cast.$.actor": "Michael Caine"}})
+  {$push: {"cast.$.actor": "Michael Caine"}})
 
 db.movies.updateOne(
   {title: "Batman", "cast.character": "Coringa"},
-  {$set: {"cast.$.actor": "Heath Ledger"}})
+  {$push: {"cast.$.actor": "Heath Ledger"}})
