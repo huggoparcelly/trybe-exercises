@@ -1,1 +1,1 @@
-db.movies.createIndex({desciption: "text"})
+db.movies.createIndex({description: "text"})
