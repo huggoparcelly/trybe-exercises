@@ -1,3 +1,5 @@
+// função que retorna uma promisse
+
 function somaMult(a, b, c) {
   return new Promise((resolve, reject) => {
     if (isNaN(a) || isNaN(b) || isNaN(c)) reject( new Error("Informe apenas números"));
@@ -12,3 +14,11 @@ function somaMult(a, b, c) {
 somaMult(10, 20, 40)
   .then((result) => console.log(result))
   .catch((err) => console.log(err.message))
+
+somaMult("a", 20, 40)
+.then((result) => console.log(result))
+.catch((err) => console.log(err.message))
+
+somaMult(1, 2, 4)
+.then((result) => console.log(result))
+.catch((err) => console.log(err.message))
