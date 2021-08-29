@@ -33,5 +33,16 @@ app.get('/simpsons', async (req, res) => {
   res.status(200).json(simpsons);
 });
 
+app.get('/simpsons/:id', async (req, res) => {
+  const id = req.params.id;
+  const simpsons = await simpsonsUtils.getSimpsons();
+
+  const simpsonId = simpsons.find((simpson) => simpson.id === id);
+
+  if(!simpsonId) return res.status(404).json({message: 'simpson not found'});
+
+  return res.status(200).json(simpsonId);
+})
+
 
 app.listen(3000);
