@@ -1,10 +1,13 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 
+const authMiddleware = require('./authMiddleware');
 const simpsonsUtils = require('./fs-utils');
+const crypto = require('crypto');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(authMiddleware);
 
 app.get('/ping', (req, res) => {
   return res.status(200).json({message: 'pong'});
@@ -53,10 +56,27 @@ app.post('/simpsons', async (req, res) => {
   if(simpsonId) return res.status(409).json({message: 'id already exists'});
   
   simpsons.push({id, name});
-  
+
   await simpsonsUtils.setSimpsons(simpsons)
 
   return res.status(204).end();
+});
+
+app.post('/singup', (req, res) => {
+  const {email, password, firstname, phone} = req.body;
+
+  if([email, password, firstname, phone].includes(undefined)) {
+    return res.status(401).json({message: 'missing fields'});
+  };
+
+  const token = crypto.randomBytes(8).toString('hex');
+
+  return res.status(200).json({ token })
+
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).send(`Algo deu errado! Mensagem: ${err.message}`);
 });
 
 app.listen(3000);
