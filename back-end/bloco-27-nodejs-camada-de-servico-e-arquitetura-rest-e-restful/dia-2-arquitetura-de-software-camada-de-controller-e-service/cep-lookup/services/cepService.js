@@ -1,12 +1,10 @@
 const cepModel = require('../models/cepModel');
 
-const cepIsvalid = (cep) => {
-  const cepRegex = /\d{5}-?\d{3}/
-  return cepRegex.test(cep);
-};
+const cepRegex = /\d{5}-?\d{3}/;
 
 const findAddressByCep = async (cep) => {
-  if(!cepIsvalid(cep)) return {
+  
+  if(!cepRegex.test(cep)) return {
     error: {
       code: "invalidData",
       message: "CEP inválido"
@@ -25,14 +23,7 @@ const findAddressByCep = async (cep) => {
   return address;
 };
 
-const createAddress = async (cep, logradouro, bairro, localidade, uf) => {
-  if(!cepIsvalid(cep)) return {
-    error: {
-      code: "invalidData",
-      message: "CEP inválido"
-    }
-  }
-
+const createAddress = async ({cep, logradouro, bairro, localidade, uf}) => {
   const existsCep = await cepModel.getAddressByCep(cep);
 
   if(existsCep) return {
@@ -42,8 +33,8 @@ const createAddress = async (cep, logradouro, bairro, localidade, uf) => {
     }
   }
 
-  const newAddress = await cepModel.createAddress(cep, logradouro, bairro, localidade, uf);
-
+  const newAddress = await cepModel.createAddress({cep, logradouro, bairro, localidade, uf});
+  
   return newAddress;
 }
 

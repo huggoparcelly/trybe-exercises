@@ -1,46 +1,45 @@
-const router = require('express').Router();
+const rescue = require('express-rescue');
 const { StatusCodes } = require('http-status-codes');
 const Joi = require('joi');
 
 const cepService = require('../services/cepService');
 
-router.get('/:cep', async(req, res) => {
+const findAddressByCep = rescue( async (req, res, next) => {
   const { cep } = req.params;
 
   const address = await cepService.findAddressByCep(cep);
-  
-  if(address.error.code === 'invalidData') {
-    return res.status(StatusCodes.BAD_REQUEST).json({message: address.error});
-  }
-  
-  if(address.error.code === 'notFound') {
-    return res.status(StatusCodes.NOT_FOUND).json({message: address.error});
+
+  if(address.error) {
+    return next(address.error);
   }
 
-  return res.status(StatusCodes.OK).json({address});
+  return res.status(StatusCodes.OK).json(address);
 });
 
-router.post('/', async(req, res) => {
+const createAddress = rescue(async (req, res, next) => {
+  // Armazenamos essa parte do schema do Joi para reutilizá-la
+  const requiredNonEmptyString = Joi.string().not().empty().required();
+
   const { error } = Joi.object({
-    cep: Joi.not().empty().required(),
-    logradouro: Joi.string().not().empty().required(),
-    bairro: Joi.string().not().empty().required(),
-    localidade: Joi.string().not().empty().required(),
-    uf: Joi.string().not().empty().max(2).required(),
+    cep: Joi.string().regex(/\d{5}-\d{3}/).required(),
+    logradouro: requiredNonEmptyString,
+    bairro: requiredNonEmptyString,
+    localidade: requiredNonEmptyString,
+    uf: requiredNonEmptyString.max(2),
   }).validate(req.body);
 
-  if(error) return res.status(StatusCodes.BAD_REQUEST).json({error})
+  if(error) return next(error);
 
-  const {cep, logradouro, bairro, localidade, uf} = req.body;
+  const newAddress = await cepService.createAddress(req.body);
 
-  const newAddress = await cepService.createAddress(cep, logradouro, bairro, localidade, uf);
-  
-  if(newAddress.error.code === 'alreadyExists') {
-    return res.status(StatusCodes.CONFLICT).json({message: newAddress.error});
-  }
+  if(newAddress.error) return next(newAddress.error);
 
   return res.status(StatusCodes.CREATED).json(newAddress);
-});
+
+})
 
 
-module.exports = router;
+module.exports = {
+  findAddressByCep,
+  createAddress
+}
