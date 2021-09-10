@@ -26,7 +26,7 @@ describe('Busca o filme pelo Id', () => {
     })
   });
 
-  describe('quando é encontrado nenhum filme com o ID passado', () => {
+  describe('quando é encontrado um filme com o ID passado', () => {
     const expectedMovie = {
       id: ID_EXAMPLE,
       title: 'Example Movie',

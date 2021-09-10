@@ -1,5 +1,5 @@
 const sinon = require('sinon');
-const { expect } = require('chai')
+const { expect } = require('chai');
 
 const MoviesController = require('../../controllers/movieController');
 const MoviesServices = require('../../services/movieService');
