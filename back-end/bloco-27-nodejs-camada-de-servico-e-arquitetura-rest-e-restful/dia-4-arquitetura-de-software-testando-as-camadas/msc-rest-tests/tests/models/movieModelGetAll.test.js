@@ -23,7 +23,7 @@ describe('Busca todos os filmes', () => {
   
   after(() => {
     mongoConnection.getConnection.restore();
-  })
+  });
   
   
   describe('Quando não existe nenhum filme criado', () => {
