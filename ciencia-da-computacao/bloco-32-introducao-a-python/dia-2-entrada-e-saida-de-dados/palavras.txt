@@ -1,3 +1,5 @@
-cortador
-origame
-papel
+python
+javascript
+trybe
+computacao
+linux
