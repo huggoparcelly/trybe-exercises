@@ -1,0 +1,5 @@
+python
+javascript
+trybe
+computacao
+linux
