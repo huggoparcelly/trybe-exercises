@@ -1,11 +1,9 @@
-# contacts = ["1-HOME-SWEET-HOME", "MY-MISERABLE-JOB"]
-import json
-
-
 def exchage_letter_to_number(word):
     number = ""
     for char in word:
-        if not char.isalpha():
+        if not char.isalnum() and not char == "-":
+            raise ValueError("Contact provided can't have special characters")
+        if char in "01-":
             number += str(char)
         elif char in "ABC":
             number += "2"
@@ -27,16 +25,17 @@ def exchage_letter_to_number(word):
     return number
 
 
-def get_number(filepath):
-    # Abrir o arquivo
-    number_list = ""
-    with open(filepath) as file:
-        contacts = json.load(file)
+def get_number(contacts):
+    numbers = ""
 
-        for contact in contacts:
-            number_list += exchage_letter_to_number(contact.upper()) + "\n"
+    if not contacts:
+        raise ValueError("Contact provided can't be empty")
+    if len(contacts) > 30:
+        raise ValueError("Contact length can't be more then 30 characters")
+    for contact in contacts:
+        numbers += exchage_letter_to_number(contact.upper())
 
-    return number_list[:-1]  # [:-1] remove o último caracter da string (\n)
+    return numbers
 
 
-print(get_number("contact.json"))
+# print(get_number("av*-1a-love"))
