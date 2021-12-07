@@ -36,6 +36,3 @@ def get_number(contacts):
         numbers += exchage_letter_to_number(contact.upper())
 
     return numbers
-
-
-# print(get_number("av*-1a-love"))
