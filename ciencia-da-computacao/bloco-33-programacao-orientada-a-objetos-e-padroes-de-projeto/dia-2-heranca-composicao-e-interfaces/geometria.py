@@ -1,9 +1,18 @@
-import math
+from abc import ABC, abstractmethod
+from math import pi
 
-# class FiguraGeometrica:
+
+class FiguraGeometrica(ABC):
+    @abstractmethod
+    def area(self):
+        raise NotImplementedError
+
+    @abstractmethod
+    def perimetro(self):
+        raise NotImplementedError
 
 
-class Quadrado:
+class Quadrado(FiguraGeometrica):
     def __init__(self, lado):
         self.lado = lado
 
@@ -14,7 +23,7 @@ class Quadrado:
         return self.lado * 4
 
 
-class Retangulo:
+class Retangulo(FiguraGeometrica):
     def __init__(self, base, altura):
         self.base = base
         self.altura = altura
@@ -23,15 +32,15 @@ class Retangulo:
         return self.base * self.altura
 
     def perimetro(self):
-        return (self.base * 2) + (self.altura * 2)
+        return 2 * (self.base + self.altura)
 
 
-class Circulo:
+class Circulo(FiguraGeometrica):
     def __init__(self, raio):
         self.raio = raio
 
     def area(self):
-        return math.pi() * (self.raio ** 2)
+        return pi() * (self.raio ** 2)
 
     def perimetro(self):
-        return 2 * math.pi() * self.raio
+        return 2 * pi() * self.raio
